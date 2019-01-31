@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		
+	</head>
+	<body>
+		<table>
+			<tr>
+				<input type="text" id="input" name = "input"></input>
+			</tr>
+			<tr>
+			<td><button onclick="b1()">1</button></td>
+			<td><button onclick="b2()">2</button></td>
+			<td><button onclick="b3()">3</button></td>
+			<td><button onclick="b4()">4</button></td>
+			<td><button onclick="b5()">5</button></td>
+			<td><button onclick="modulo()">%</button></td>
+			</tr>
+			<tr>
+			<td><button onclick="b6()">6</button></td>
+			<td><button onclick="b7()">7</button></td>
+			<td><button onclick="b8()">8</button></td>
+			<td><button onclick="b9()">9</button></td>
+			<td><button onclick="b0()">0</button></td>
+			<td><button onclick="c()">C</button></td>
+			</tr>
+			<tr>
+			<td><button onclick="plus()">+</button></td>
+			<td><button onclick="minus()">-</button></td>
+			<td><button onclick="multiply()">*</button></td>
+			<td><button onclick="divide()">/</button></td>
+			<td><button onclick="equals()">=</button></td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script type="text/javascript">
+			var n1=""
+			var x =""
+
+			function c(){
+				document.getElementById("input").value=""
+				n1 = "";
+				x = "";
+			}
+			function b0(){
+				document.getElementById("input").value+='0';
+
+			}
+			function b1(){
+				document.getElementById("input").value+='1';
+
+			}
+			function b2(){
+				document.getElementById("input").value+='2';
+
+			}
+			function b3(){
+				document.getElementById("input").value+='3';
+
+			}
+			function b4(){
+				document.getElementById("input").value+='4';
+
+			}
+			function b5(){
+				document.getElementById("input").value+='5';
+
+			}
+			function b6(){
+				document.getElementById("input").value+='6';
+
+			}
+			function b7(){
+				document.getElementById("input").value+='7';
+
+			}
+			function b8(){
+				document.getElementById("input").value+='8';
+
+			}
+			function b9(){
+				document.getElementById("input").value+='9';
+
+			}
+			function plus(){
+				x = "1";
+				n1 = document.getElementById("input").value;
+				document.getElementById("input").value="";
+			}
+			function minus(){
+				x = "2";
+				n1 = document.getElementById("input").value;
+				document.getElementById("input").value="";
+			}
+			function multiply(){
+				x = "3";
+				n1 = document.getElementById("input").value;
+				document.getElementById("input").value="";
+			}
+			function divide(){
+				x = "4";
+				n1 = document.getElementById("input").value;
+				document.getElementById("input").value="";
+			}
+
+			function modulo(){
+				x = "5";
+				n1 = document.getElementById("input").value;
+				document.getElementById("input").value="";
+			}
+		
+			function equals(){
+				let n2 = n1
+				n1 = document.getElementById("input").value;
+				if (x == "1"){//plus function
+					document.getElementById("input").value= parseFloat(n1) + parseFloat(n2);
+				}
+				else if (x == "2"){//minus function
+					document.getElementById("input").value= parseFloat(n2) - parseFloat(n1);
+				}
+				else if (x == "3"){//multiply function
+					document.getElementById("input").value= parseFloat(n1) * parseFloat(n2);
+				}
+				else if (x == "4"){//divide function
+					document.getElementById("input").value= parseFloat(n2) / parseFloat(n1);
+				}
+				else if (x == "5"){//modulo function
+					document.getElementById("input").value= parseFloat(n2) % parseFloat(n1);
+				}
+
+				
+			}
+
+
+		</script>
+
